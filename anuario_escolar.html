@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amortizacion basica</title>
+    <link rel="stylesheet" href="anuario_escolar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="anuario_escolar.js" defer></script>
+</head>
+<body>
+    <!------------------------------------>
+    <!--|estructuracion_anuario_escolar|-->
+    <!------------------------------------>
+    <header>
+        <h1>Anuario Escolar</h1>
+        <p>Agrega la foto y el nombre de cada estudiante.</p>
+    </header>
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección 1: formulario para agregar un estudiante -->
+        <section class="caja">
+            <h2>Agregar estudiante</h2>
+            <!-- Campo para escribir el nombre -->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Ejemplo: María Pérez">
+            <!-- Campo para elegir la fotografía -->
+            <label for="foto">Fotografía</label>
+            <input type="file" id="foto" accept="image/*">
+            <!-- Vista previa de la foto elegida (oculta al inicio) -->
+            <img id="vista" class="vista" alt="Vista previa de la foto" hidden>
+            <!-- Aquí se escriben los avisos -->
+            <p id="mensaje" class="mensaje"></p>
+            <!-- Botón para guardar al estudiante -->
+            <button id="agregar" type="button">Agregar al anuario</button>
+        </section>
+        <!-- Sección 2: lista de estudiantes -->
+        <section class="caja">
+            <h2>Estudiantes</h2>
+            <!-- Cuadro para buscar por nombre -->
+            <label for="buscar">Buscar por nombre</label>
+            <input type="text" id="buscar" placeholder="Escribe para buscar">
+            <!-- Total de estudiantes (lo escribe JavaScript) -->
+            <p id="contador" class="contador"></p>
+            <!-- Texto que se ve cuando no hay estudiantes -->
+            <p id="vacio">Todavía no hay estudiantes en el anuario.</p>
+            <!-- Aquí JavaScript coloca las tarjetas -->
+            <div id="lista" class="lista"></div>
+            <!-- Botón para borrar todos los estudiantes -->
+            <button id="borrar-todo" type="button" class="rojo">Borrar todo</button>
+        </section>
+        <!-- Sección 3: instrucciones de uso -->
+        <section class="caja">
+            <h2>Cómo usar</h2>
+            <!-- Lista numerada con los pasos -->
+            <ol>
+                <li>Escribe el nombre del estudiante.</li>
+                <li>Elige su fotografía.</li>
+                <li>Pulsa "Agregar al anuario".</li>
+                <li>Las fotos se reducen solas para que quepan.</li>
+                <li>Los datos se guardan solos en este navegador.</li>
+            </ol>
+        </section>
+    </main>
+    <!-- Fin del contenido principal -->
+    <!-- Aviso si JavaScript está desactivado -->
+    <noscript>Activa JavaScript para usar el anuario.</noscript>
+    <!-- Plantilla de una tarjeta: JavaScript la copia por cada estudiante -->
+    <template id="plantilla">
+        <article class="tarjeta">
+            <!-- Fotografía del estudiante -->
+            <img alt="">
+            <!-- Nombre del estudiante -->
+            <h3></h3>
+            <!-- Botón para quitar esta tarjeta -->
+            <button type="button" class="rojo">Quitar</button>
+        </article>
+    </template>
+</body>
+</html>

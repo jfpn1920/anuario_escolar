@@ -1,0 +1,78 @@
+/* Estilos del Anuario Escolar (diseño sencillo) */
+/* Página: tipografía y color de fondo */
+body { margin: 0; font-family: Arial, sans-serif; background-color: #f2f4f8; color: #222222; }
+/* Encabezado azul conel título */
+header { background-color: #2f5fb3; color: white; text-align: center; padding: 24px 16px; }
+h1 { margin: 0 0 8px 0; font-size: 32px; }
+header p { margin: 0; }
+/* Contenido principal centrado */
+main { max-width: 800px; margin: 0 auto; padding: 16px; }
+/* Cada sección es una caja blanca */
+.caja {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+/* Títulos de las secciones */
+h2 { margin-top: 0; color: #2f5fb3; }
+/* Etiquetas de los campos */
+label { display: block; margin-top: 12px; margin-bottom: 4px; font-weight: bold; }
+/* Campo de texto */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/* Vista previa de la foto elegida */
+.vista {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 12px;
+    border: 2px solid #2f5fb3;
+}
+/* Avisos de error */
+.mensaje {
+    color: #c0392b;
+    min-height: 20px;
+}
+/* Botones */
+button {
+    padding: 8px 16px;
+    background-color: #2f5fb3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+/* Botones de color rojo (quitar y brrar todo) */
+.rojo { background-color: #c0392b; }
+/* Botón cuando el mouse pasa por encima */
+button:hover { opacity: 0.85; }
+/* Texto con el total de estudiantes */
+.contador { color: #555555; }
+/* Lista de tarjetas en cuadrícula de tres columnas */
+.lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+/* Tarjeta de un estudiante */
+.tarjeta {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    background-color: #fafafa;
+}
+/* Foto dentro de la tarjeta (cuadrada) */
+.tarjeta img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
+/* Nombre dentro de la tarjeta */
+.tarjeta h3 { margin: 8px 0; font-size: 16px; }
