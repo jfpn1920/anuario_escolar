@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amortizacion basica</title>
+    <link rel="stylesheet" href="anuario_escolar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="anuario_escolar.js" defer></script>
+</head>
+<body>
+    <!------------------------------------>
+    <!--|estructuracion_anuario_escolar|-->
+    <!------------------------------------>
+    <header>
+        <h1>Anuario Escolar</h1>
+        <p>Agrega la foto y el nombre de cada estudiante.</p>
+    </header>
+    <!---------------------------------------->
+    <!--|estructuracion_contenido_principal|-->
+    <!---------------------------------------->
+    <main>
+        <section class="caja">
+            <h2>Agregar estudiante</h2>
+            <label for="nombre">Nombre del estudiante:</label>
+            <input type="text" id="nombre" placeholder="Escribe el nombre">
+            <label for="foto">Fotografía del estudiante:</label>
+            <input type="file" id="foto" accept="image/*">
+            <img id="vista" class="vista" alt="Vista previa de la fotografía" hidden>
+            <p id="mensaje" class="mensaje" aria-live="polite"></p>
+            <button type="button" id="agregar">Agregar estudiante</button>
+        </section>
+        <!-------------------------->
+        <!--|lista_de_estudiantes|-->
+        <!-------------------------->
+        <section class="caja">
+            <h2>Estudiantes registrados</h2>
+            <label for="buscar">Buscar estudiante:</label>
+            <input type="text" id="buscar" placeholder="Escribe un nombre">
+            <p id="contador" class="contador">Total: 0</p>
+            <p id="vacio" hidden>No hay estudiantes registrados.</p>
+            <div id="lista" class="lista"></div>
+            <button type="button" id="borrar-todo" class="rojo">Borrar todos</button>
+        </section>
+        <!-------------------------->
+        <!--|instrucciones_de_uso|-->
+        <!-------------------------->
+        <section class="caja">
+            <h2>¿Cómo utilizar el anuario?</h2>
+            <ol>
+                <li>Escribe el nombre del estudiante.</li>
+                <li>Selecciona una fotografía desde tu dispositivo.</li>
+                <li>Revisa la vista previa de la imagen.</li>
+                <li>Pulsa el botón para agregar al estudiante.</li>
+                <li>Busca estudiantes por su nombre o elimina los registros que necesites.</li>
+            </ol>
+        </section>
+    </main>
+    <!-------------------------->
+    <!--|plantilla_de_tarjeta|-->
+    <!-------------------------->
+    <template id="plantilla">
+        <article class="tarjeta">
+            <img src="" alt="">
+            <h3></h3>
+            <button type="button" class="rojo">Quitar</button>
+        </article>
+    </template>
+</body>
+</html>

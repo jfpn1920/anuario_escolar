@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    color: #222222;
+}
+/*-----------------------------*/
+/*--|estilos_anuario_escolar|--*/
+/*-----------------------------*/
+header {
+    background: #2f5fb3;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 16px;
+}
+header h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+}
+/*--------------------------------*/
+/*--|estilos_cajas_de_contenido|--*/
+/*--------------------------------*/
+.caja {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.caja h2 {
+    color: #2f5fb3;
+}
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="file"] {
+    max-width: 100%;
+}
+.vista {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 12px;
+    border: 2px solid #2f5fb3;
+}
+.mensaje {
+    color: #c0392b;
+    min-height: 20px;
+}
+.contador {
+    color: #555555;
+}
+button {
+    padding: 8px 16px;
+    background: #2f5fb3;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.rojo {
+    background: #c0392b;
+}
+button:hover {
+    opacity: 0.85;
+}
+/*----------------------------------*/
+/*--|estilos_lista_de_estudiantes|--*/
+/*----------------------------------*/
+.lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.tarjeta {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    background: #fafafa;
+}
+.tarjeta img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.tarjeta h3 {
+    margin: 8px 0;
+    font-size: 16px;
+}
